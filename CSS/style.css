@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+:root {
+	--black: #020403;
+	--grey: #ADADAD;
+	--white: #FFFFFF;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+	background-color: var(--black);
+	color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 50px 1fr 0.5fr 0.5fr 0.4fr 0.5fr 0.4fr;
+	grid-template-areas:	'header header header'
+							'home home home'
+							'about about about'
+							'skills skills skills'
+							'experiences experiences experiences'
+							'briefcase briefcase briefcase'
+							'contact contact contact';
+	max-width: 1024px;
+    min-width: 375px;
+	gap: 2rem;
+}
+/*     HEADER     */
+.header {
+	grid-area: header;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    max-width: 1024px;
+    min-width: 300px;
+    min-height: 50px;
+    z-index: 1000;
+}
+
+.header .menu {
+	/* background-color: red; */
+}
+
+.header .menu ul {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+}
+
+.header .menu ul li {
+	text-align: center;
+}
+
+.header .menu ul li a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-family: 'Rubik', sans-serif;
+	font-size: 15px;
+}
+
+.header .menu ul li a:hover {
+    color: #ADADAD;
+}
+
+/*  HOME   */
+.Home {
+	grid-area: home;
+	display: flex;
+	justify-content: center;
+}
+.Home .box_home {
+	/* background-color: red; */
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Home .box_home .title h2 {
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Rubik', sans-serif;
+	color: var(--grey);
+}
+.Home .box_home .title h1 {
+	text-align: center;
+	font-size: 90px;
+	font-family: 'Rubik', sans-serif;
+}
+
+.Dan {
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    border-radius: 45%;
+}
+
+/*       SOCIAL     */
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+.icons_social {
+	display: flex;
+    min-width: 650px;
+    justify-content: space-between;
+}
+
+.icon {
+    min-width: 60px;
+    min-height: 60px;
+}
+
+
+/*       ABOUT       */
+
+.about {
+	grid-area: about;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.about h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 45px;
+    
+}
+
+
+/*       MIS HABILIDADES         */
+
+.skills {
+	grid-area: skills;
+/*    background-color: red;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr repeat(2, 1fr);
+    grid-template-rows: 0.5fr repeat(2, 1fr);
+}
+
+.skills h2 {
+    display: grid;
+    font-size: 45px;
+    grid-row: 1/2;
+    grid-column: 1/6;
+    place-content: center;
+}
+
+.mobile {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.motion {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.web_desing {
+    grid-row: 3/6;
+    grid-column: 4/5;
+}
+
+.desing {
+    grid-row: 3/6;
+    grid-column: 2/3;
+}
+
+.alingCenter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+    gap: 1rem;
+    font-size: 10px;
+}
+
+.img_icon {
+    
+}
+
+.style_circle {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #18191A ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*        EXPERIENCIES     */
+
+.experiences {
+	grid-area: experiences;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.experiences h2 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.box_xp {
+    display: flex;
+    justify-content: space-between;
+/*    background-color: red;*/
+    height: 150px;
+    align-items: center;
+    position: relative;
+    
+}
+.work {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    justify-content: center;
+}
+
+.work div p:nth-child(1){
+    font-size: 20px;
+}
+
+.work div p:nth-child(2) {
+    margin-bottom: 7px;
+    font-size: 15px;
+    color: #ADADAD;
+}
+
+.gears {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #ADADAD;
+    margin-left: 5rem;
+}
+
+.line {
+    background-color: #18191A;
+    border: none;
+    width: 700px;
+    height: 3px;
+}
+
+/*  PORTAFOLIO */
+
+.briefcase {
+	grid-area: briefcase;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.briefcase h2 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.briefcase div {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    
+}
+
+.img_folio {
+    width: 300px;
+    height: 250px;
+}
+
+.img_folio:hover {
+    filter: drop-shadow(1px 1px 6px #6c6c6c);
+}
+
+/*        CONTACT    */
+
+.contact {
+	grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact h2 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.contact .box_contact {
+    display: flex;
+    gap: 3rem;
+    margin-left: 30px;
+}
+
+.tel_email {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tel_email div:nth-child(2) p:nth-child(2) {
+    font-size: 14px;
+    color: #ADADAD;
+}
+
+.tel_email div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #ADADAD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar {
+    display: none;
+}
+
+@media (max-width: 1010px){
+    
+    .briefcase div {
+        display: flex;
+        flex-flow: wrap;
+        gap: 2rem;
+        justify-content: space-around;
+        
+    }
+}
+
+@media (max-width: 800px){
+    .container {
+	    display: grid;
+	    grid-template-columns: 1fr;
+	    grid-template-rows: 50px 1fr 0.5fr 0.5fr 0.4fr 0.5fr 0.4fr;
+	    grid-template-areas:	'header'
+							    'home'
+							    'about'
+							    'skills'
+							    'experiences'
+							    'briefcase'
+							    'contact';
+	    max-width: 1024px;
+        min-width: 375px;
+	    gap: 1rem;
+        margin: auto;
+    }
+    .briefcase div {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Home .box_home .title h1 {
+	    text-align: center;
+	    font-size: 70px;
+	    font-family: 'Rubik', sans-serif;
+    }
+    
+    .header {
+	    grid-area: header;
+	    display: flex;
+	    justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 50px;
+        left: 0;
+        z-index: 900;
+        background-color: black;
+        border-left: 1px solid #ADADAD;
+        border-top: 1px solid #ADADAD;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+        opacity: 0.9;
+    }
+
+    .menu_show {
+        transform: translateX(0);
+    }
+    
+    .header .menu ul {
+	    display: flex;
+        flex-direction: column;
+	    gap: 2rem;
+	    list-style: none;
+    }
+
+    .header .menu ul li a {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+    }
+
+    .header .menu ul li a:hover {
+        color: gray;
+    }
+    
+    .bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 800px;
+        min-width: 300px;
+        height: 50px;
+        background-color: black;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1000;
+        align-items: center;
+        padding: 1rem;
+    }
+    .bx-menu {
+        font-size: 40px;
+        cursor: pointer;
+        position: absolute;
+        top: 0.3rem;
+        right: 1rem;
+        color: white;
+    }
+    .bx-x{
+        font-size: 50px;
+        cursor: pointer;
+        color: white;
+    }
+    .btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+    .bx-menu_disguise {
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .about p {
+        width: 80%;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .line {
+        background-color: #18191A;
+        border: none;
+        width: 500px;
+        height: 3px;
+    }
+    .icons_social {
+        display: flex;
+        min-width: 650px;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 665px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 0.8fr 0.5fr 0.5fr 0.4fr 0.5fr 0.4fr;
+        grid-template-areas:    'header'
+                                'home'
+                                'about'
+                                'skills'
+                                'experiences'
+                                'briefcase'
+                                'contact';
+        max-width: 1024px;
+        min-width: 375px;
+        gap: 1rem;
+        margin: auto;
+    }
+    .briefcase div {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Home .box_home .title h1 {
+        text-align: center;
+        font-size: 55px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+     .Home .box_home .title h2 {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    
+    .header .menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .header .menu ul li a {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+    }
+
+    .header .menu ul li a:hover {
+        color: gray;
+    }
+    
+    .bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 800px;
+        min-width: 300px;
+        height: 50px;
+        background-color: black;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1000;
+        align-items: center;
+        padding: 1rem;
+    }
+    .bx-menu {
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .about p {
+        width: 80%;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .line {
+        background-color: #18191A;
+        border: none;
+        width: 450px;
+        height: 3px;
+    }
+    .icons_social {
+        display: flex;
+        min-width: 500px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px){
+    .Dan {
+        width: 300px;
+        height: 350px;
+        margin: auto;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+        border-radius: 45%;
+    }
+    .icons_social {
+        display: flex;
+        min-width: 450px;
+        justify-content: space-between;
+    }
+
+    .Home .box_home .title h1 {
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+     .Home .box_home .title h2 {
+        text-align: center;
+        font-size: 35px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .skills {
+        grid-area: skills;
+    /*    background-color: red;*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+
+    .skills h2 {
+        display: grid;
+        font-size: 35px;
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        place-content: center;
+    }
+    .relleno {
+        padding: 0.5rem;
+    }
+
+    .mobile {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+
+    .motion {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+
+    .web_desing {
+        grid-row: 5/6;
+        grid-column: 1/-1;
+    }
+
+    .desing {
+        grid-row: 4/5;
+        grid-column: 1/-1;
+    }
+
+    .alingCenter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-self: center;
+        gap: 1rem;
+        font-size: 10px;
+    }
+
+    .about h2 {
+        font-family: 'Rubik', sans-serif;
+        font-size: 35px;
+    }
+
+    .experiences h2 {
+        text-align: center;
+        font-size: 35px;
+    }
+    .briefcase h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+    .contact {
+        grid-area: contact;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+        justify-content: center;
+    }
+    .contact h2 {
+        font-size: 35px;
+        margin-left: 1rem;
+    }
+    .contact .box_contact {
+        display: flex;
+        gap: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .gears {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: #ADADAD;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .icons_social {
+        display: flex;
+        min-width: 300px;
+        justify-content: space-between;
+    }
+
+    .Home .box_home .title h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Rubik', sans-serif;
+    }
+
+     .Home .box_home .title h2 {
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Rubik', sans-serif;
+    }
+    .skills h2 {
+        display: grid;
+        font-size: 25px;
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        place-content: center;
+    }
+    .about h2 {
+        font-family: 'Rubik', sans-serif;
+        font-size: 25px;
+    }
+
+    .experiences h2 {
+        text-align: center;
+        font-size: 25px;
+    }
+    .briefcase h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .contact h2 {
+        font-size: 25px;
+        margin-left: 1rem;
+    }
+    .icon {
+        min-width: 50px;
+        min-height: 50px;
+    }
+}
