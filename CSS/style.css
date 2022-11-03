@@ -13,6 +13,9 @@
     text-decoration: none;
 }
 
+html {
+    overflow-x: hidden;
+}
 
 body {
 	font-size: 18px;
@@ -39,6 +42,7 @@ body {
 	max-width: 1024px;
     min-width: 375px;
 	gap: 2rem;
+    z-index: 2;
 }
 /*     HEADER     */
 .header {
@@ -360,6 +364,65 @@ body {
     display: none;
 }
 
+/*      VECTOR     */
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cirleVector {
+    border-radius: 50%;
+    border: 2px solid var(--grey);
+    opacity: 0.8;
+}
+#vector1 {
+    background-color: transparent;
+    width: 10rem;
+    height: 10rem;
+}
+#vector1 > div {
+    width: 100%;
+    height: 100%;
+}
+#vector1 > div > div {
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 0.2rem;
+}
+#vector1 > div > div > div {
+    width: 8rem;
+    height: 8rem;
+}
+.positionVector1 {
+    position: absolute;
+    top: 215%;
+    right: -3%;
+}
+
+#vector2 {
+    background-color: transparent;
+    width: 15rem;
+    height: 15rem;
+}
+#vector2  div {
+    width: 100%;
+    height: 100%;
+}#vector2 div  div {
+    width: 13.5rem;
+    height: 13.5rem;
+    margin-bottom: 0.2rem;
+}#vector2 div div div {
+    width: 12rem;
+    height: 12rem;
+}
+.positionVector2 {
+    position: absolute;
+    left: -7%;
+    top: 310%;
+}
+
 @media (max-width: 1010px){
     
     .briefcase div {
@@ -500,6 +563,55 @@ body {
         min-width: 650px;
         justify-content: space-evenly;
     }
+    #vector1 {
+        background-color: transparent;
+        width: 8rem;
+        height: 8rem;
+    }
+    #vector1 > div {
+        width: 100%;
+        height: 100%;
+    }
+    #vector1 > div > div {
+        width: 7rem;
+        height: 7rem;
+        margin-bottom: 0.2rem;
+    }
+    #vector1 > div > div > div {
+        width: 6rem;
+        height: 6rem;
+    }
+    .positionVector1 {
+        position: absolute;
+        top: 212%;
+        right: -6%;
+    }
+
+    #vector2 {
+        background-color: transparent;
+        width: 10rem;
+        height: 10rem;
+    }
+    #vector2  div {
+        width: 100%;
+        height: 100%;
+    }
+    #vector2 div  div {
+        width: 9rem;
+        height: 9rem;
+        margin-bottom: 0.2rem;
+    }
+    #vector2 div div div {
+        width: 8rem;
+        height: 8rem;
+    }
+    .positionVector2 {
+        position: absolute;
+        z-index: 1;
+        left: -7%;
+        top: 290%;
+    }
+
 }
 
 @media (max-width: 665px){
@@ -798,6 +910,109 @@ body {
     .Dan {
         width: 250px;
         height: 300px;
+    }
+
+    #vector1 {
+    background-color: transparent;
+    width: 8rem;
+    height: 8rem;
+    }
+    #vector1 > div {
+        width: 100%;
+        height: 100%;
+    }
+    #vector1 > div > div {
+        width: 7rem;
+        height: 7rem;
+        margin-bottom: 0.2rem;
+    }
+    #vector1 > div > div > div {
+        width: 6rem;
+        height: 6rem;
+    }
+    .positionVector1 {
+        position: absolute;
+        top: 155%;
+        right: -13%;
+    }
+
+    #vector2 {
+        background-color: transparent;
+        width: 8rem;
+        height: 8rem;
+    }
+    #vector2  div {
+        width: 100%;
+        height: 100%;
+    }
+    #vector2 div  div {
+        width: 7rem;
+        height: 7rem;
+        margin-bottom: 0.2rem;
+    }
+    #vector2 div div div {
+        width: 6rem;
+        height: 6rem;
+    }
+    .positionVector2 {
+        position: absolute;
+        left: -7%;
+        top: 280%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    #vector1 {
+        background-color: transparent;
+        width: 6rem;
+        height: 6rem;
+    }
+    #vector1 > div {
+        width: 100%;
+        height: 100%;
+    }
+    #vector1 > div > div {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 0.2rem;
+    }
+    #vector1 > div > div > div {
+        width: 4rem;
+        height: 4rem;
+    }
+    .positionVector1 {
+        position: absolute;
+        top: 160%;
+        right: -5%;
+    }
+
+    #vector2 {
+        background-color: transparent;
+        width: 7rem;
+        height: 7rem;
+    }
+    #vector2  div {
+        width: 100%;
+        height: 100%;
+    }
+    #vector2 div  div {
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 0.2rem;
+    }
+    #vector2 div div div {
+        width: 5rem;
+        height: 5rem;
+    }
+    .positionVector2 {
+        position: absolute;
+        left: -11%;
+        top: 285%;
+    }
+
+    .briefcase h2 {
+        font-size: 25px;
     }
 
 }
